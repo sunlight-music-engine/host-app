@@ -7,4 +7,8 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
+  this.route('home', { path: '' }, function() {
+    this.mount('sunlight-browser-engine', { as: 'browser', path: '/' });
+    this.mount('sunlight-album-engine', { as: 'album', path: '/album' });
+  });
 });
